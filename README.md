@@ -1,6 +1,6 @@
 # Sobre o desafio
  
-A API deve conter as seguintes funcionalidades:
+### Funcionalidades:
 
 - Criação de uma task
 - Listagem de todas as tasks
@@ -11,7 +11,7 @@ A API deve conter as seguintes funcionalidades:
 
 ### Rotas e regras de negócio
 
-Antes das rotas, vamos entender qual a estrutura (propriedades) que uma task deve ter:
+##### [Propriedades] Estrutura de uma task:
 
 - `id` - Identificador único de cada task
 - `title` - Título da task
@@ -20,7 +20,7 @@ Antes das rotas, vamos entender qual a estrutura (propriedades) que uma task dev
 - `created_at` - Data de quando a task foi criada.
 - `updated_at` - Deve ser sempre alterado para a data de quando a task foi atualizada.
 
-Rotas:
+##### Rotas:
 
 - `POST - /tasks`
     
@@ -55,3 +55,31 @@ Rotas:
     Deve ser possível marcar a task como completa ou não. Isso significa que se a task estiver concluída, deve voltar ao seu estado “normal”.
     
     Antes da alteração, deve ser feito uma validação se o `id` pertence a uma task salva no banco de dados.
+
+### Como rodar o projeto e testar as funcionalidades
+
+Clone este repositório
+
+```bash
+$ git clone https://github.com/rickborges93/Ignite-React-Github-Blog.git
+$ cd Ignite-React-Github-Blog/githubblog
+```
+
+Inicie o projeto seguindo os seguintes passos:
+
+```bash
+# Instale as dependências
+$ npm install
+
+# Rode a API principal
+$ npm run dev
+```
+
+Mantendo este terminal em aberto, abra um segundo terminal em paralelo para testar a leitura de arquivos por stream:
+
+```bash
+# Rode a leitura de arquivo
+$ npm run file
+```
+
+Pronto, depois de rodar o comando de leitura de arquivo, basta fazer uma requisição do tipo GET para a url ```http://localhost:3333/tasks``` e ver todos os dados que foram inseridos do CSV localizado em ```stream/file/tasks.csv```.
