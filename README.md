@@ -61,7 +61,7 @@
 Clone este repositório
 
 ```bash
-$ git clone https://github.com/rickborges93/Ignite-React-Github-Blog.git
+$ git clone https://github.com/rickborges93/desafio1-nodejs.git
 $ cd Ignite-React-Github-Blog/githubblog
 ```
 
